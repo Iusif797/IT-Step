@@ -1,0 +1,57 @@
+.container {
+    width: 400px;
+    height: 350px;
+    margin: 100px auto;
+    border: 1px solid black;
+    background-image: url(278750_tiny.jpg);
+    background-color: #ffdddd;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 20px;
+
+    background-attachment: local;
+    overflow: scroll;
+
+    background-image: url(278750_tiny.jpg) rgba(0 0 0 0.5) no-repat; 
+    background-size: cover;
+}
+
+.container h2, .container p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+p {
+    font-size: 36px;
+    color: black;
+}
+
+.title:hover:before {
+    content: " Alex!"
+}
+
+
+.box-grad {
+    /* width: 450px;
+    height: 250px;
+    margin: 100px auto 0 auto;
+    border-bottom: 1px solid black;
+
+    background-image: linear-gradient(to top, blue, black, green, white); */
+    /* background-image: radial-gradient(
+        circle at bottom,
+        yellow 15%,
+         green 30%, 
+         blue 40%,
+         white 20%
+    ); */
+
+    background: repeating-linear-gradient(),
+    rgba(0 0 0 0.5),
+    rgba(0,0,0,0.7),
+    rgb(red, green, blue)
+    ;
+}
