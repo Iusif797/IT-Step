@@ -3,3 +3,57 @@ body {
     justify-content: center;
     margin-top: 100px;
 }
+
+.icon {
+    width: 100px;
+    height: 100px;
+    fill: green;
+}
+
+.icon:hover {
+    fill: blue;
+    scale: calc(1.5);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 400px;
+    height: 50px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.user {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+img {
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    .user {
+        scale: calc(0.5);
+    }
+
+    input {
+        scale: calc(0.5);
+    }
+
+    .wrapper {
+        scale: calc(0.5);
+    }
+}
