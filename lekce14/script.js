@@ -43,4 +43,19 @@ console.log("Good buy!");
 
 
 
+let userName = prompt("Enter your name");
+let password = prompt("Enter your password"); 
+
+if (userName === "alexVin") {
+    if (password === "12345") {
+        console.log("Welcome!");
+    } else {
+        console.log("Invalid password");
+    }
+} else {
+    console.log("Invalid username");
+}
+
+
+
 
