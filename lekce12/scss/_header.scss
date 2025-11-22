@@ -1,0 +1,69 @@
+@use 'variable';
+
+.title {
+    color: variable.$primaryColor;
+    // font-size: variable.$titlefontSize;
+}
+
+
+//css 
+.section {
+    $secondColor: blue;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    color: $secondColor;
+    font-size: large;
+}
+
+.smenu {
+    display: flex;
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    &__item {
+        color: variable.$primaryColor;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+
+    &__link--active:active {
+        font-weight: bold;
+        border-bottom: 2px solid variable.$primaryColor;
+    }
+}
+
+//Директива @extend 
+.btn {
+    width: 100px;
+    height: 75px;
+    background-color: aqua;
+    border-radius: none;
+}
+
+
+.btn2{
+    @extend .btn;
+    background-color: yellow;   
+}
+
+//Шаблоны
+%button {
+    width: 100px;
+    height: 75px;
+    background-color: aqua;
+    border-radius: none;
+}
+
+
+.btn2{
+    @extend %button;
+    background-color: yellow;   
+}

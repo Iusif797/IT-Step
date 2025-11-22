@@ -1,7 +1,3 @@
-/* Проблема: в HTML файле элемент .box закомментирован (<!-- <div class="box"> -->)
-   Поэтому стили для .box не применяются.
-   Решение: раскомментируйте <div class="box"></div> в index.html */
-
 .box {
     width: 200px;
     height: 200px;
@@ -12,7 +8,7 @@
     /* transition-delay: 3000ms; */
 }
 
-.box:hover {
+.box:hover { 
     background-color: blue;
     transform: scale(1.5);
 }
@@ -31,28 +27,50 @@
     height: 200px;
     outline: 1px solid black;
 
-    position: absolute;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
 
-    /* overflow: visible; */
+.box2__title {
+    margin: 0;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+    z-index: 1;
 }
 
 .overlay {
-    /* position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    box-sizing: border-box;
+    
 
     transition: transform 0.5s ease;
     transform: translateX(-100%);
 }
 
-.box2:hover  .overlay{
+.box2:hover .overlay {
     transform: translateX(0);
 }
 
-.box2:hover h2{
-    display: none;
+.box2:hover .box2__title {
+    opacity: 0;
+}
+
+.text {
+    margin: 0;
 }
 
 @keyframes changeBackground {
@@ -75,7 +93,7 @@
         transform: skew(10deg);
     }
     100% {
-        background-color: aqua;
+        transform: skew(0);
     }
 }
 
@@ -83,12 +101,17 @@
     width: 200px;
     height: 200px;
     outline: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .box3:hover {
-    /* animation-name: changePosition;
+    animation-name: changePosition;
     animation-duration: 3000ms;
     animation-timing-function: linear;
-    animation-iteration-count: infinite; */
-    animation: all 2s linear infinity [fill-mode] [play-state]
+    animation-iteration-count: infinite;
 }

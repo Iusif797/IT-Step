@@ -1,0 +1,89 @@
+$primaryColor: black;
+$titlefontSize: 24px;
+
+.title {
+    color: $primaryColor;
+    
+}
+
+p {
+    color: $primaryColor;
+}
+
+
+.header-sectiom {
+
+    $secondColor: blue;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    color: $secondColor;
+    font-size: large;
+}
+
+li {
+    color: $primaryColor;
+}
+
+
+//Директива each
+
+
+.dog-icon {
+  background-image: url('../images/dog.png');
+}
+
+.cat-icon {
+  background-image: url('../images/cat.png');
+}
+
+.bird-icon {
+  background-image: url('../images/bird.png');
+}
+
+.turtle-icon {
+  background-image: url('../images/turtle.png');
+}
+
+@each $animal in dog, cat, bird, turtle {
+    .#{$animal}-icon{
+         background-image: url('../images/#{$animal}.png');
+    }
+}
+
+@each $animal in dog, cat, bird, turtle {
+    .#{$animal}-icon {
+        background-image: url('/icons/#{$animal}.png');
+    } 
+}
+
+
+$color-title: black;
+$color-btn: white;
+$color-hover: blue;
+$color-background: grey;
+
+$colors:   (
+    "title" : black,
+    "btn" : white,
+    "hover" : blue,
+    "background" : grey
+);
+
+body {
+    background-color: map-get($colors, "background");
+}
+
+
+@function get-color($colorKey) {
+    @return map-get($colors, $colorKey);
+}
+
+
+.btn3 {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    color: get-color("btn");
+    background-color: get-color("background");
+}
