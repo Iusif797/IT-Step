@@ -1,0 +1,18 @@
+.nav-menu__item-link{
+    text-decoration: none;
+}
+
+.nav-menu__item-link--reaction:hover,
+.nav-menu__item-link--reaction:focus{
+    color:blue;
+}
+
+.logo__link--reaction:hover,
+.logo__link--reaction:focus{
+    transform: scale(1.5);
+}
+
+.nav-menu__item-link--active:active{
+    color: red;
+    border-bottom: 2px solid blue;
+}
